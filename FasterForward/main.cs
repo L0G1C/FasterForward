@@ -3,20 +3,42 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TaleWorlds.CampaignSystem;
 using TaleWorlds.Core;
+using TaleWorlds.InputSystem;
 using TaleWorlds.Localization;
 using TaleWorlds.MountAndBlade;
+using TourneySaveScum;
 
 namespace FasterForward
 {
     public class Main : MBSubModuleBase
     {
-        public override void OnMissionBehaviourInitialize(Mission mission)
+        
+        protected override void OnSubModuleLoad()
         {
-            var x = Mission.Current.IsCharacterWindowAccessAllowed;  //this is false when entering mission
-
-            // TODO - find a way to intercept TaleWorlds.CampaignSystem.SandBox.Source.TournamentGames.TounramentCampaignBehavior.game_menu_tournament_join_current_game_on_consequence
+            //todo
         }
 
+        protected override void OnApplicationTick(float dt)
+        {
+            base.OnApplicationTick(dt);
+
+            var currentCampaign = Campaign.Current;            
+
+            if (currentCampaign != null 
+                && Input.IsKeyPressed(InputKey.D4))
+            {
+                currentCampaign.SpeedUpMultiplier = 16f;
+                currentCampaign.SetTimeSpeed(2);
+            }
+
+            if (currentCampaign != null
+            && Input.IsKeyPressed(InputKey.D3))
+            {
+                currentCampaign.SpeedUpMultiplier = 4f;
+                currentCampaign.SetTimeSpeed(2);
+            }
+        }        
     }
 }
