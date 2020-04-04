@@ -8,7 +8,6 @@ using TaleWorlds.Core;
 using TaleWorlds.InputSystem;
 using TaleWorlds.Localization;
 using TaleWorlds.MountAndBlade;
-using TourneySaveScum;
 
 namespace FasterForward
 {

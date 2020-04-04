@@ -164,7 +164,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ConfigHandler.cs" />
+    <Compile Include="ExecuteTimeControlChangePatch.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
