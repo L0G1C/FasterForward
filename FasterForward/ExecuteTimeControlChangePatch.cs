@@ -32,6 +32,6 @@ namespace FasterForward
 
                 currentCampaign.SetTimeSpeed(2);
             }
-		}       
+        }       
     }
 }
