@@ -15,8 +15,8 @@ namespace FasterForward
     {
         private static void Postfix(int selectedTimeSpeed)
         {            
-			if (Campaign.Current.CurrentMenuContext == null || (Campaign.Current.CurrentMenuContext.GameMenu.IsWaitActive && !Campaign.Current.TimeControlModeLock))
-			{
+            if (Campaign.Current.CurrentMenuContext == null || (Campaign.Current.CurrentMenuContext.GameMenu.IsWaitActive && !Campaign.Current.TimeControlModeLock))
+            {
                 var currentCampaign = Campaign.Current;
 
                 //Handle Normal FastForward
