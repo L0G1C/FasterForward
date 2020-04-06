@@ -30,4 +30,4 @@ The MapControlVM object has references to GameTexts and hotkeys:
 			this.FastForwardHint = new HintViewModel(GameTexts.FindText("str_hotkey_with_hint", null).ToString(), null);
 			
 			
-Somehow MapVM actually ties to the UI we see on the screen.
+Somehow MapVM ties to the UI by looking for the series of xml file sin Sandbox -> Prefabs -> Map folder.  I can overwrite the map bar by replacing MapBar.xml
