@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HarmonyLib;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,7 +17,8 @@ namespace FasterForward
         
         protected override void OnSubModuleLoad()
         {
-            //todo
+            var harmony = new Harmony("com.logicstudios.mods.fasterfoward");
+            harmony.PatchAll();
         }
 
         protected override void OnApplicationTick(float dt)
